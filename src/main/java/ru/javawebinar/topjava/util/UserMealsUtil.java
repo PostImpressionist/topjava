@@ -63,8 +63,8 @@ public class UserMealsUtil {
                     int sum = userMealList.stream().mapToInt(UserMeal::getCalories).sum();
                     return userMealList.stream()
                             .filter(userMeal -> TimeUtil.isBetweenHalfOpen(userMeal.getTime(), startTime, endTime))
-                            .map(meal -> new UserMealWithExcess(meal.getDateTime(), meal.getDescription(),
-                                    meal.getCalories(), sum > caloriesPerDay));
+                            .map(userMeal -> new UserMealWithExcess(userMeal.getDateTime(), userMeal.getDescription(),
+                                    userMeal.getCalories(), sum > caloriesPerDay));
                 })
                 .collect(Collectors.toList());
     }

@@ -3,7 +3,7 @@ package ru.javawebinar.topjava.web.user;
 import ru.javawebinar.topjava.model.User;
 
 import java.util.List;
-`
+
 public class AdminRestController extends AbstractUserController {
 
     @Override
